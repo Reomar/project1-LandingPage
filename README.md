@@ -4,18 +4,18 @@ which is a simple landing page that have Dynamic NavBar (The NavBar is cerated i
 
 ------------
 
-##index.html
+### index.html
 the **index.html** contains `<sections>` with the attributes  of`id` & `data-name`  , which are used in the js to generate the NavBar.
 > `data-name` is the text that is used in the NavBar.
 
-##styles.css
+### styles.css
 the `.active` is a class used to style the NavBar link that indecates that `<section>` is in the viewport.
 
-##app.js
+### app.js
 - The `main()` function generates the NavBar.
 - The event listener is listening for scroll to determine which `<section>` is in the view port and add `.active` class to the nav-link corresponding to it. 
 
 
 ------------
 
-##Demo: [Landing Page Demo](https://reomar.github.io/project1-LandingPage/ "Landing Page Demo") 
+### Demo: [Landing Page Demo](https://reomar.github.io/project1-LandingPage/ "Landing Page Demo") 
