@@ -13,6 +13,9 @@
  *
 */
 
+//refactor test
+const startTime = performance.now();
+
 /**
  * Main function
 **/
@@ -55,6 +58,10 @@ function main(){
 
     // Add active class to the first navlink
     document.querySelector(".nav-link").classList.add('active');
+
+    //refactor test
+    const endTime = performance.now();
+    console.log(`Execute time is ${endTime - startTime}`)
 }
 
 
