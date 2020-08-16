@@ -14,55 +14,55 @@
 */
 
 /**
- *  Global varibles
-**/
-
- // Select all the sections
-const sections = document.querySelectorAll('section');
-
-
-/**
  * Main function
 **/
 
-// Build the navBar
+function main(){
+    // Build the navBar
 
-// Seclect the navbar to add elements to it
-const navBar = document.querySelector('#navbar');
+    // Select all the sections
+    const sections = document.querySelectorAll('section');
 
-// Create empty DocumentFragment object
-const fragment = document.createDocumentFragment();
+    // Seclect the navbar to add elements to it
+    const navBar = document.querySelector('#navbar');
 
-// Itreate over the sctions and create <a> elemet
-// and add nav-link class to each element
-// and add herf attribute with the crossponding section id
-for (const section of sections){
+    // Create empty DocumentFragment object
+    const fragment = document.createDocumentFragment();
 
-    // Cerate a new a element
-    const newElement = document.createElement('a');
+    // Itreate over the sctions and create <a> elemet
+    // and add nav-link class to each element
+    // and add herf attribute with the crossponding section id
+    for (const section of sections){
 
-    // Add text to it (text value is in html attribute data-name)
-    newElement.innerText = section.dataset.name;
+        // Cerate a new a element
+        const newElement = document.createElement('a');
 
-    // Add nav-link class to the element
-    newElement.classList.add('nav-link');
+        // Add text to it (text value is in html attribute data-name)
+        newElement.innerText = section.dataset.name;
 
-    // Add herf attribute to the section id
-    newElement.setAttribute('href', '#'+section.id);
+        // Add nav-link class to the element
+        newElement.classList.add('nav-link');
 
-    // Append the element to the fragment
-    fragment.appendChild(newElement);
+        // Add herf attribute to the section id
+        newElement.setAttribute('href', '#'+section.id);
+
+        // Append the element to the fragment
+        fragment.appendChild(newElement);
+    }
+
+    // Append the fragment to the navBar
+    navBar.appendChild(fragment);
+
+    // Add active class to the first navlink
+    document.querySelector(".nav-link").classList.add('active');
 }
 
-// Append the fragment to the navBar
-navBar.appendChild(fragment);
 
-// Add active class to the first navlink
-document.querySelector(".nav-link").classList.add('active');
-
+// Start the main function
+main();
 
 /**
-* Scrolling events Events
+* Begin Scrolling Events
 **/
 
 // The below code is inspired from Chris Coyier, https://css-tricks.com/sticky-smooth-active-nav/#active
